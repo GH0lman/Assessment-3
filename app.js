@@ -35,13 +35,14 @@ function setupPopups(xmlData) {
     for (let i = 0; i < areas.length; i++) {
         let currentArea = document.getElementById("ra-" + (i+1));
         let currentAreaPopup = document.getElementById("popup" + (i+1));
-        let content = currentAreaPopup.getElementsByTagName("p");
+        let popupContent = currentAreaPopup.getElementsByTagName("p");
+        let popupImg = currentAreaPopup.querySelector("img");
 
-        content[0].innerHTML = "Cost: " + areas[i].getElementsByTagName("cost")[0].childNodes[0].nodeValue;
-        content[1].innerHTML = "Booking Status: " + areas[i].getElementsByTagName("status")[0].childNodes[0].nodeValue;
-        content[2].innerHTML = "Capacity: " + areas[i].getElementsByTagName("capacity")[0].childNodes[0].nodeValue;
-        content[3].innerHTML = "Image: " + areas[i].getElementsByTagName("src")[0].childNodes[0].nodeValue;
-        
+        popupContent[0].innerHTML = "Cost: " + areas[i].getElementsByTagName("cost")[0].childNodes[0].nodeValue;
+        popupContent[1].innerHTML = "Booking Status: " + areas[i].getElementsByTagName("status")[0].childNodes[0].nodeValue;
+        popupContent[2].innerHTML = "Capacity: " + areas[i].getElementsByTagName("capacity")[0].childNodes[0].nodeValue;
+        popupImg.src = areas[i].getElementsByTagName("src")[0].childNodes[0].nodeValue;
+
         if (areas[i].getElementsByTagName("status")[0].childNodes[0].nodeValue == "Reserved")
             currentArea.style.backgroundColor = "rgba(255, 0, 0, 0.5)";
     }

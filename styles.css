@@ -98,6 +98,12 @@ section {
     margin-left: -125px;
     line-height: 10px;
     pointer-events: none;
+    z-index: 2;
+}
+
+.popupImage {
+    width: 200px;
+    margin: 16px;
 }
 
 .reservedArea:hover .popup {

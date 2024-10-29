@@ -10,69 +10,69 @@
         <cost>99.99</cost>
         <status>Available</status>
         <capacity>20</capacity>
-        <src>../assets/1.png</src>
+        <src>../assets/popup1.jpg</src>
     </area>
     <!-- Reserved Area 2 -->
     <area>
         <cost>99.99</cost>
         <status>Reserved</status>
         <capacity>20</capacity>
-        <src>../assets/2.png</src>
+        <src>../assets/popup2.jpg</src>
     </area>
     <!-- Reserved Area 3 -->
     <area>
         <cost>79.99</cost>
         <status>Available</status>
         <capacity>10</capacity>
-        <src>../assets/3.png</src>
+        <src>../assets/popup3.jpg</src>
     </area>
     <!-- Reserved Area 4 -->
     <area>
         <cost>49.99</cost>
         <status>Available</status>
         <capacity>5</capacity>
-        <src>../assets/4.png</src>
+        <src>../assets/popup4.jpg</src>
     </area>
     <!-- Reserved Area 5 -->
     <area>
         <cost>49.99</cost>
         <status>Reserved</status>
         <capacity>5</capacity>
-        <src>../assets/5.png</src>
+        <src>../assets/popup5.jpg</src>
     </area>
     <!-- Reserved Area 6 -->
     <area>
         <cost>49.99</cost>
         <status>Reserved</status>
         <capacity>5</capacity>
-        <src>../assets/6.png</src>
+        <src>../assets/popup6.jpg</src>
     </area>
     <!-- Reserved Area 7 -->
     <area>
         <cost>49.99</cost>
         <status>Available</status>
         <capacity>5</capacity>
-        <src>../assets/7.png</src>
+        <src>../assets/popup7.jpg</src>
     </area>
     <!-- Reserved Area 8 -->
     <area>
         <cost>49.99</cost>
         <status>Available</status>
         <capacity>5</capacity>
-        <src>../assets/8.png</src>
+        <src>../assets/popup8.jpg</src>
     </area>
     <!-- Reserved Area 9 -->
     <area>
         <cost>79.99</cost>
         <status>Available</status>
         <capacity>10</capacity>
-        <src>../assets/9.png</src>
+        <src>../assets/popup9.jpg</src>
     </area>
     <!-- Reserved Area 10 -->
     <area>
         <cost>249.99</cost>
         <status>Available</status>
         <capacity>50</capacity>
-        <src>../assets/10.png</src>
+        <src>../assets/popup10.jpg</src>
     </area>
 </areas>
