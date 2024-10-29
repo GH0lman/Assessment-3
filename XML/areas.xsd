@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created by George Holman - Student ID: 1580967 -->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <!-- Reserved Areas -->
+    <xs:element name="areas">
+        <xs:complexType>
+            <xs:sequence>
+                <!-- Reserved Area 1 -->
+                <xs:element name="area">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="cost" type="xs:float"/>
+                            <xs:element name="status" type="xs:string"/>
+                            <xs:element name="capacity" type="xs:integer"/>
+                            <xs:element name="src" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <!-- Reserved Area 2 -->
+                <xs:element name="area">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="cost" type="xs:float"/>
+                            <xs:element name="status" type="xs:string"/>
+                            <xs:element name="capacity" type="xs:integer"/>
+                            <xs:element name="src" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <!-- Reserved Area 3 -->
+                <xs:element name="area">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="cost" type="xs:float"/>
+                            <xs:element name="status" type="xs:string"/>
+                            <xs:element name="capacity" type="xs:integer"/>
+                            <xs:element name="src" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <!-- Reserved Area 4 -->
+                <xs:element name="area">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="cost" type="xs:float"/>
+                            <xs:element name="status" type="xs:string"/>
+                            <xs:element name="capacity" type="xs:integer"/>
+                            <xs:element name="src" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <!-- Reserved Area 5 -->
+                <xs:element name="area">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="cost" type="xs:float"/>
+                            <xs:element name="status" type="xs:string"/>
+                            <xs:element name="capacity" type="xs:integer"/>
+                            <xs:element name="src" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <!-- Reserved Area 6 -->
+                <xs:element name="area">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="cost" type="xs:float"/>
+                            <xs:element name="status" type="xs:string"/>
+                            <xs:element name="capacity" type="xs:integer"/>
+                            <xs:element name="src" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <!-- Reserved Area 7 -->
+                <xs:element name="area">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="cost" type="xs:float"/>
+                            <xs:element name="status" type="xs:string"/>
+                            <xs:element name="capacity" type="xs:integer"/>
+                            <xs:element name="src" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <!-- Reserved Area 8 -->
+                <xs:element name="area">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="cost" type="xs:float"/>
+                            <xs:element name="status" type="xs:string"/>
+                            <xs:element name="capacity" type="xs:integer"/>
+                            <xs:element name="src" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <!-- Reserved Area 9 -->
+                <xs:element name="area">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="cost" type="xs:float"/>
+                            <xs:element name="status" type="xs:string"/>
+                            <xs:element name="capacity" type="xs:integer"/>
+                            <xs:element name="src" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <!-- Reserved Area 10 -->
+                <xs:element name="area">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="cost" type="xs:float"/>
+                            <xs:element name="status" type="xs:string"/>
+                            <xs:element name="capacity" type="xs:integer"/>
+                            <xs:element name="src" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

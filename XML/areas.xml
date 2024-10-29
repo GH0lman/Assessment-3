@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created by George Holman - Student ID: 1580967 -->
+
+<!-- Reserved Areas -->
+<areas
+    xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="areas.xsd">
+    <!-- Reserved Area 1 -->
+    <area>
+        <cost>99.99</cost>
+        <status>Available</status>
+        <capacity>20</capacity>
+        <src>../assets/1.png</src>
+    </area>
+    <!-- Reserved Area 2 -->
+    <area>
+        <cost>99.99</cost>
+        <status>Reserved</status>
+        <capacity>20</capacity>
+        <src>../assets/2.png</src>
+    </area>
+    <!-- Reserved Area 3 -->
+    <area>
+        <cost>79.99</cost>
+        <status>Available</status>
+        <capacity>10</capacity>
+        <src>../assets/3.png</src>
+    </area>
+    <!-- Reserved Area 4 -->
+    <area>
+        <cost>49.99</cost>
+        <status>Available</status>
+        <capacity>5</capacity>
+        <src>../assets/4.png</src>
+    </area>
+    <!-- Reserved Area 5 -->
+    <area>
+        <cost>49.99</cost>
+        <status>Reserved</status>
+        <capacity>5</capacity>
+        <src>../assets/5.png</src>
+    </area>
+    <!-- Reserved Area 6 -->
+    <area>
+        <cost>49.99</cost>
+        <status>Reserved</status>
+        <capacity>5</capacity>
+        <src>../assets/6.png</src>
+    </area>
+    <!-- Reserved Area 7 -->
+    <area>
+        <cost>49.99</cost>
+        <status>Available</status>
+        <capacity>5</capacity>
+        <src>../assets/7.png</src>
+    </area>
+    <!-- Reserved Area 8 -->
+    <area>
+        <cost>49.99</cost>
+        <status>Available</status>
+        <capacity>5</capacity>
+        <src>../assets/8.png</src>
+    </area>
+    <!-- Reserved Area 9 -->
+    <area>
+        <cost>79.99</cost>
+        <status>Available</status>
+        <capacity>10</capacity>
+        <src>../assets/9.png</src>
+    </area>
+    <!-- Reserved Area 10 -->
+    <area>
+        <cost>249.99</cost>
+        <status>Available</status>
+        <capacity>50</capacity>
+        <src>../assets/10.png</src>
+    </area>
+</areas>
