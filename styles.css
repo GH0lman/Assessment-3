@@ -1,0 +1,64 @@
+/* Created by George Holman - Student ID: 1580967 */
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* Body Setup */
+html, body {
+    font-family: Helvetica, Verdana, Tahoma, sans-serif;
+    line-height: 1.5;
+    background-color: #e3f0ff;
+}
+
+/* Main Elements Setup */
+header {
+    text-align: center;
+}
+
+nav {
+    background-color: #fff;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
+    margin: 16px;
+  }
+
+nav>a {
+    display: inline-block;
+    background-color: midnightblue;
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    padding: 10px;
+    width: auto;
+}
+
+section {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    width: 90%;
+    padding: 12px;
+}
+
+#containerDiv {
+    display: flex;
+    padding: 24px;
+}
+
+#inputDiv {
+    display: flex;
+    justify-content: center;
+}
+
+#inputDiv > div{
+    font-weight: 700;
+    margin: 0 8%;
+}
+
+#bookingSystemMap {
+    width: 85%;
+    float: right;
+}

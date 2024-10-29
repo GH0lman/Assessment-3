@@ -1,0 +1,69 @@
+<!-- Created by George Holman - Student ID: 1580967 -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Assessment 2</title>
+        <link rel="stylesheet" href="./styles.css" />
+    </head>
+    <body>
+         <!-- Header -->
+        <header>
+            <nav>
+                <a href="../index.html">Part 1</a>
+                <a href="../index.html">Part 1 Wireframe</a>
+                <a href="../index.html">Part 2</a>
+                <a href="../index.html">Part 3</a>
+                <a href="../index.html">Part 4</a>
+            </nav>
+            <h1>Parakai Springs</h1>
+        </header>
+        <section>
+            <h1>Reserved Area Booking</h1>
+            <p>Description of reserved areas at Parakai Springs</p>
+            <!-- Input Div -->
+            <div id="inputDiv">
+                <div>
+                    Check In: 
+                    <input type="date" />
+                </div>
+                <div>
+                    Check Out: 
+                    <input type="date" />
+                </div>
+                <div>
+                    Capacity: 
+                    <input type="number" />
+                </div>
+                <div>
+                    Search: 
+                    <button>Search</button>
+                </div>
+            </div>
+            <!-- Container Div -->
+            <div id="containerDiv">
+                <!-- Sidebar Div-->
+                <div id="sidebarDiv">
+                    <h1>Book a Reserved Area</h1>
+                    <p>Instructions for how to use the booking system.<br/>Following steps include:</p>
+                    <ol>
+                        <li>Set the Check In and Check Out dates</li>
+                        <li>Enter capacity required</li>
+                        <li>Click Search to see available areas</li>
+                        <li>Hover over areas to see details</li>
+                        <li>Select an available area</li>
+                        <li>Submit your booking</li>
+                    </ol>
+                </div>
+                <!-- Map Div-->
+                <div id="mapDiv">
+                    <!--https://images.luxuryescapes.com/b0a96f08ch5aix5qo6n.webp-->
+                    <img id="bookingSystemMap" src="./assets/booking-system-map.png" />
+                </div>
+            </div>
+        </section>
+        <!-- Java Script Link -->
+        <script src="./app.js"></script>
+    </body>
+</html>
