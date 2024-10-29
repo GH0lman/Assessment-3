@@ -89,7 +89,7 @@ function checkAvailability(capacityData, statusData) {
 }
 
 function summarySetup(currentArea, areaCost, areaStatus, areaCapacity) {
-    let summaryContent = modal.getElementsByTagName("p");
+    let summaryContent = summaryModal.getElementsByTagName("p");
     let numOfDays = (new Date(checkOut.value).getTime() - new Date(checkIn.value).getTime()) / (1000 * 60 * 60 * 24);  
 
     if (comparisonCapacity != userCapacity.value) {
@@ -117,32 +117,59 @@ function summarySetup(currentArea, areaCost, areaStatus, areaCapacity) {
         return;
     }
 
-    modal.style.display = "block";
+    summaryModal.style.display = "block";
     
-    summaryContent[0].innerHTML = "<b>Check In:</b> " + checkIn.value;
-    summaryContent[1].innerHTML = "<b>Check Out:</b> " + checkOut.value;
-    summaryContent[2].innerHTML = "<b>Number of People:</b> " + userCapacity.value;
-    summaryContent[3].innerHTML = "<b>Maximum Capacity:</b> " + areaCapacity;
-    summaryContent[4].innerHTML = "<b>No. of Days:</b> " + numOfDays;
-    summaryContent[5].innerHTML = "<b>Cost per Day:</b> $" + areaCost;
-    summaryContent[6].innerHTML = "<b>Total Cost:</b> $" + (areaCost * numOfDays);
+    userSummaryData = [];
+    userSummaryData.push(checkIn.value);
+    userSummaryData.push(checkOut.value);
+    userSummaryData.push(userCapacity.value);
+    userSummaryData.push(areaCapacity);
+    userSummaryData.push(numOfDays);
+    userSummaryData.push(areaCost);
+    userSummaryData.push(areaCost * numOfDays);
+
+    summaryContent[0].innerHTML = "<b>Check In:</b> " + userSummaryData[0];
+    summaryContent[1].innerHTML = "<b>Check Out:</b> " + userSummaryData[1];
+    summaryContent[2].innerHTML = "<b>Number of People:</b> " + userSummaryData[2];
+    summaryContent[3].innerHTML = "<b>Maximum Capacity:</b> " + userSummaryData[3];
+    summaryContent[4].innerHTML = "<b>No. of Days:</b> " + userSummaryData[4];
+    summaryContent[5].innerHTML = "<b>Cost per Day:</b> $" + userSummaryData[5];
+    summaryContent[6].innerHTML = "<b>Total Cost:</b> $" + userSummaryData[6];
 }
 
-let modal = document.getElementById("summaryModal");
+let summaryModal = document.getElementById("summaryModal");
+let bookedModal = document.getElementById("bookedModal");
 
 let checkIn = document.getElementById("check-in");
 let checkOut = document.getElementById("check-out");
 let userCapacity = document.getElementById("capacity");
 
+let userSummaryData = [];
 let comparisonCapacity = 0;
 
 window.onload = fetchAndProcessXML;
 window.onclick = function(event) {
-    if (event.target == modal) {
+    if (event.target == summaryModal || event.target == bookedModal) {
         closeModal();
     }
 }
 
+function submitBooking() {
+    summaryModal.style.display = "none";
+    bookedModal.style.display = "block";
+
+    let bookedContent = bookedModal.getElementsByTagName("p");
+
+    bookedContent[0].innerHTML = "<b>Check In:</b> " + userSummaryData[0];
+    bookedContent[1].innerHTML = "<b>Check Out:</b> " + userSummaryData[1];
+    bookedContent[2].innerHTML = "<b>Number of People:</b> " + userSummaryData[2];
+    bookedContent[3].innerHTML = "<b>Maximum Capacity:</b> " + userSummaryData[3];
+    bookedContent[4].innerHTML = "<b>No. of Days:</b> " + userSummaryData[4];
+    bookedContent[5].innerHTML = "<b>Cost per Day:</b> $" + userSummaryData[5];
+    bookedContent[6].innerHTML = "<b>Total Cost:</b> $" + userSummaryData[6];
+}
+
 function closeModal() {
-    modal.style.display = "none";
+    summaryModal.style.display = "none";
+    bookedModal.style.display = "none";
 }

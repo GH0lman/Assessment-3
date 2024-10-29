@@ -183,11 +183,23 @@
                     <p>No. of Days:</p>
                     <p>Cost per Day:</p>
                     <p>Total Cost:</p>
-                    <button class="modalBtn" id="confirmBtn">Confirm Booking</button>
+                    <button class="modalBtn" id="confirmBtn" onclick="submitBooking()">Confirm Booking</button>
                     <button class="modalBtn" id="cancelBtn" onclick="closeModal()">Cancel</button>
                 </div>
             </div>
-
+            <div id="bookedModal" class="modal">
+                <div class="modalContent">
+                    <h1>Booking Submitted</h1>
+                    <p>Check In:</p>
+                    <p>Check Out:</p>
+                    <p>Number of People:</p>
+                    <p>Maximum Capacity:</p>
+                    <p>No. of Days:</p>
+                    <p>Cost per Day:</p>
+                    <p>Total Cost:</p>
+                    <button class="modalBtn" id="cancelBtn" onclick="closeModal()">Cancel</button>
+                </div>
+            </div>
         </section>
         <!-- Java Script Link -->
         <script src="./app.js"></script>
