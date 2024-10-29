@@ -24,60 +24,96 @@ function fetchAndProcessXML() {
                 return;
             }
 
-            setupPopups(xmlData);
+            setupBookingForm(xmlData);
         })
         .catch(error => console.error("Error fetching or processing XML:", error));
 }
 
-function setupPopups(xmlData) {
+function setupBookingForm(xmlData) {
     let areas = xmlData.getElementsByTagName("area");
+    let costData = [];
+    let statusData = [];
+    let capacityData = [];
+
+    let todayDate = new Date();
+    checkIn.value = todayDate.toISOString().substring(0, 10);
+
+    todayDate.setDate(todayDate.getDate() + 1);
+    checkOut.value = todayDate.toISOString().substring(0, 10);
+    
+    userCapacity.value = 0;
 
     for (let i = 0; i < areas.length; i++) {
         let currentArea = document.getElementById("ra-" + (i+1));
         let currentAreaPopup = document.getElementById("popup" + (i+1));
         let popupContent = currentAreaPopup.getElementsByTagName("p");
         let popupImg = currentAreaPopup.querySelector("img");
+        
+        costData.push(areas[i].getElementsByTagName("cost")[0].childNodes[0].nodeValue);
+        statusData.push(areas[i].getElementsByTagName("status")[0].childNodes[0].nodeValue);
+        capacityData.push(areas[i].getElementsByTagName("capacity")[0].childNodes[0].nodeValue);
 
-        popupContent[0].innerHTML = "<b>Cost:</b> $" + areas[i].getElementsByTagName("cost")[0].childNodes[0].nodeValue;
-        popupContent[1].innerHTML = "<b>Booking Status:</b> " + areas[i].getElementsByTagName("status")[0].childNodes[0].nodeValue;
-        popupContent[2].innerHTML = "<b>Capacity:</b> " + areas[i].getElementsByTagName("capacity")[0].childNodes[0].nodeValue;
+        popupContent[0].innerHTML = "<b>Cost:</b> $" + costData[i];
+        popupContent[1].innerHTML = "<b>Booking Status:</b> " + statusData[i];
+        popupContent[2].innerHTML = "<b>Capacity:</b> " + capacityData[i];
         popupImg.src = areas[i].getElementsByTagName("src")[0].childNodes[0].nodeValue;
 
-        if (areas[i].getElementsByTagName("status")[0].childNodes[0].nodeValue == "Reserved")
+        if (statusData.at(i) == "Reserved")
             currentArea.style.backgroundColor = "rgba(255, 0, 0, 0.5)";
         
         currentArea.onclick = function() {
-            summarySetup(areas[i].getElementsByTagName("cost")[0].childNodes[0].nodeValue, areas[i].getElementsByTagName("capacity")[0].childNodes[0].nodeValue, areas[i].getElementsByTagName("status")[0].childNodes[0].nodeValue);
+            summarySetup(currentArea, costData[i], statusData[i], capacityData[i]);
         }
+    }
+
+    let searchBtn = document.getElementById("search");
+
+    searchBtn.onclick = function() {
+        checkAvailability(capacityData, statusData);
     }
 }
 
-function checkAvailability(areas) {
+function checkAvailability(capacityData, statusData) {
+    for (let i = 0; i < 10; i++) {
+        let currentArea = document.getElementById("ra-" + (i+1));
 
+        if (userCapacity.value > parseInt(capacityData[i]) || statusData[i] == "Reserved") {
+            currentArea.style.backgroundColor = "rgba(255, 0, 0, 0.5)";
+        }
+        else {
+            currentArea.style.backgroundColor = "rgba(0, 255, 0, 0.5)";
+        }
+    }
+
+    comparisonCapacity = userCapacity.value;
 }
 
-function summarySetup(areaCost, areaCapacity, areaStatus) {
-    let checkIn = document.getElementById("check-in");
-    let checkOut = document.getElementById("check-out");
-    let userCapacity = document.getElementById("capacity");
-
+function summarySetup(currentArea, areaCost, areaStatus, areaCapacity) {
     let summaryContent = modal.getElementsByTagName("p");
     let numOfDays = (new Date(checkOut.value).getTime() - new Date(checkIn.value).getTime()) / (1000 * 60 * 60 * 24);  
 
-    if (checkIn.value == "" || checkOut.value == "") {
-        alert("Error! Please Enter Dates for Booking.");
+    if (comparisonCapacity != userCapacity.value) {
+        alert("Capacity Input Changed. Please Use Search Button to See Available Areas for your Desired Capacity.");
         return;
     }
-    else if (userCapacity.value <= 0) {
-        alert("Error! Please Enter a Number greater than zero for Capacity.");
+    if (checkIn.value == "" || checkOut.value == "") {
+        alert("Error! Please Enter Dates for Booking.");
         return;
     }
     else if (numOfDays <= 0) {
         alert("Error! Please Enter Valid Booking Dates.");
         return;
     }
+    else if (userCapacity.value <= 0) {
+        alert("Error! Please Enter a Number greater than zero for Capacity.");
+        return;
+    }
     else if (areaStatus == "Reserved") {
         alert("Error! Booking Already Reserved. Please Choose another Reserved Area for Booking.");
+        return;
+    }
+    else if (currentArea.style.backgroundColor == "rgba(255, 0, 0, 0.5)") {
+        alert("Error! Capacity Inputted is Greater than Maximum Capacity of Selected Area.");
         return;
     }
 
@@ -93,6 +129,12 @@ function summarySetup(areaCost, areaCapacity, areaStatus) {
 }
 
 let modal = document.getElementById("summaryModal");
+
+let checkIn = document.getElementById("check-in");
+let checkOut = document.getElementById("check-out");
+let userCapacity = document.getElementById("capacity");
+
+let comparisonCapacity = 0;
 
 window.onload = fetchAndProcessXML;
 window.onclick = function(event) {
