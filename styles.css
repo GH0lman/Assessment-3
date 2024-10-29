@@ -17,183 +17,268 @@ html, body {
 
 /* Main Elements Setup */
 header {
+    /* Text Design Attributes */
     text-align: center;
+    /* Positioning Attributes */
+    padding: 10px;
 }
 
 nav {
+    /* Division Design Attributes */
     background-color: #fff;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
-    margin: 16px;
-  }
+    /* Positioning Atributes */
+    display: flex;
+    justify-content: space-around;
+}
 
-nav>a {
-    display: inline-block;
-    background-color: midnightblue;
+.navLink {
+    /* Division Design Attributes */
+    background-color: grey;
+    border: 1px solid black;
+    /* Text Design Attributes */
     color: white;
     font-size: 24px;
+    text-decoration: none;
     font-weight: 700;
+    /* Positioning Atributes */
+    flex: 1;
     padding: 10px;
-    width: auto;
 }
 
 section {
+    /* Division Design Attributes */
+    background-color: #fff;
+    /* Positioning Atributes */
     margin-left: auto;
     margin-right: auto;
-    background-color: #fff;
     width: 90%;
-    padding: 12px;
-}
-
-#containerDiv {
-    display: flex;
     padding: 24px;
 }
 
+.border {
+    /* Division Design Attributes */
+    border: 2px solid black;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+}
+
+/* Input Div Setup */
 #inputDiv {
+    /* Positioning Atributes */
     display: flex;
-    justify-content: center;
-}
-
-#inputDiv > div{
-    font-weight: 700;
-    margin: 0 8%;
-}
-
-#mapDiv {
-    position: relative;
-    float: right;
-    width: 80%;
-}
-
-#bookingSystemMap {
-    float: right;
+    gap: 10px;
     width: 100%;
 }
 
+.inputContainer{
+    /* Positioning Atributes */
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    /* Text Design Attributes */
+    font-weight: 700;
+    font-size: 20px;;
+}
+
+.flexInput {
+    /* Positioning Atributes */
+    width: 100%;
+    height: 32px;
+    /* Text Design Attributes */
+    font-size: 16px;
+    /* Division Design Attributes */
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+#searchBtn {
+    /* Text Design Attributes */
+    color: white;
+    /* Division Design Attributes */
+    background-color: #686868;
+}
+
+/* Container Div Setup */
+#containerDiv {
+    /* Positioning Atributes */
+    display: flex;
+    width: 100%;
+}
+
+/* Sidebar Div Setup */
+#sidebarDiv {
+    /* Positioning Atributes */
+    flex: 1;
+}
+
+/* Map Div Setup */
+#mapDiv {
+    /* Positioning Atributes */
+    display: flex;
+    position: relative;
+    margin-top: 24px;
+    flex: 3;
+}
+
+/* Booking System Image Setup */
+#bookingSystemMap {
+    /* Positioning Atributes */
+    width: 100%;
+}
+
+/* Reserved Area Boxes Setup */
 .reservedArea {
+    /* Positioning Atributes */
     position: absolute;
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
+    /* Division Design Attributes */
     background-color: rgba(0, 255, 0, 0.5);
     border: 2px dotted white;
     cursor: pointer;
 }
 
 .raText {
+    /* Text Design Attributes */
     text-align: center;
     font-size: 42px;
     font-weight: 700;
-    line-height: 15px;
+    line-height: 0px;
 }
 
+/* Popup Div Setup */
 .popup {
+    /* Division Design Attributes */
     opacity: 0%;
-    width: 250px;
-    background-color: rgba(245, 245, 245, 0.9);
-    border: 3px solid black;
+    background-color: whitesmoke;
     text-align: center;
+    pointer-events: none;
+    z-index: 2;
+    /* Positioning Atributes */
+    width: 250px;
     position: absolute;
     bottom: 110%;
     left: 50%;
     margin-left: -125px;
     line-height: 10px;
-    pointer-events: none;
-    z-index: 2;
 }
 
 .popupImage {
+    /* Positioning Atributes */
     width: 200px;
     margin: 16px;
 }
 
+/* Popup Functionality Setup */
 .reservedArea:hover .popup {
+    /* Division Design Attributes */
     opacity: 100%;
-  }
+}
 
+/* Reserved Area Positions Setup */
 #ra-1 {
-    top: 200px;
-    left: 750px;
+    /* Positioning Atributes */
+    top: 30%;
+    left: 60%;
 }
 
 #ra-2 {
-    top: 200px;
-    left: 500px;
+    /* Positioning Atributes */
+    top: 30%;
+    left: 40%;
 }
 
 #ra-3 {
-    top: 400px;
-    left: 700px;
+    /* Positioning Atributes */
+    top: 55%;
+    left: 55%;
 }
 
 #ra-4 {
-    top: 350px;
-    left: 500px;
+    /* Positioning Atributes */
+    top: 50%;
+    left: 40%;
 }
 
 #ra-5 {
-    top: 350px;
-    left: 275px;
+    /* Positioning Atributes */
+    top: 50%;
+    left: 20%;
 }
 
 #ra-6 {
-    top: 350px;
-    left: 75px;
+    /* Positioning Atributes */
+    top: 50%;
+    left: 5%;
 }
 
 #ra-7 {
-    top: 500px;
-    left: 150px;
+    /* Positioning Atributes */
+    top: 70%;
+    left: 10%;
 }
 
 #ra-8 {
-    top: 525px;
-    left: 425px;
+    /* Positioning Atributes */
+    top: 75%;
+    left: 35%;
 }
 
 #ra-9 {
-    top: 225px;
-    left: 300px;
+    /* Positioning Atributes */
+    top: 30%;
+    left: 25%;
 }
 
 #ra-10 {
-    top: 300px;
-    left: 1050px;
+    /* Positioning Atributes */
+    top: 40%;
+    left: 85%;
 }
 
+/* Modal Div Setup */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 100; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+    /* Positioning Atributes */
+    display: none;
+    position: fixed;
+    z-index: 100;
+    padding-top: 100px;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    /* Division Design Attributes */
+    background-color: rgba(0,0,0,0.4);
 }
 
 .modalContent {
+    /* Division Design Attributes */
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
     border: 1px solid #888;
-    width: 25%; /* Could be more or less, depending on screen size */
+    /* Positioning Atributes */
+    margin: 15% auto;
+    padding: 20px;
+    width: 25%;
+    /* Text Design Attributes */
     text-align: center;
 }
 
+/* Modal Buttons Setup */
 .modalBtn {
+    /* Text Design Attributes */
     color: white;
     font-size: 18px;
+    /* Positioning Atributes */
     padding: 8px;
 }
 
 #confirmBtn {
+    /* Division Design Attributes */
     background-color: #04AA6D;
 
 }
 
 #cancelBtn {
+    /* Division Design Attributes */
     background-color: #ca2f2f;
 }

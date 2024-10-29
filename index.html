@@ -11,35 +11,34 @@
     <body>
          <!-- Header -->
         <header>
-            <nav>
-                <a href="index.html">Home (Not Currently Added)</a>
-                <a href="planning-documents/Assessment 2 - Part 1 Webpage Design.pdf" target="_blank">Part 1 Wireframe</a>
-                <a href="index.html">Part 1 Booking</a>
-                <a href="index.html">Part 2 Wireframe (Not Currently Added)</a>
-                <a href="index.html">Part 2 Game (Not Currently Added)</a>
+            <nav class="border">
+                <a href="index.html" class="navLink">Home Page</a>
+                <a href="planning-documents/Assessment 2 - Part 1 Webpage Design.pdf" class="navLink" target="_blank">Part 1 Wireframe Page</a>
+                <a href="index.html" class="navLink">Part 1 Booking Page</a>
             </nav>
             <h1>Parakai Springs</h1>
         </header>
-        <section>
+        <!-- Booking Form Div -->
+        <section class="border">
             <h1>Reserved Area Booking</h1>
             <p>Description of reserved areas at Parakai Springs</p>
             <!-- Input Div -->
             <div id="inputDiv">
-                <div>
+                <div class="inputContainer">
                     <label for="date">Check In:</label>
-                    <input id="check-in" type="date"/>
+                    <input class="flexInput" id="check-in" type="date"/>
                 </div>
-                <div>
+                <div class="inputContainer">
                     <label for="date">Check Out:</label>
-                    <input id="check-out" type="date"/>
+                    <input class="flexInput" id="check-out" type="date"/>
                 </div>
-                <div>
+                <div class="inputContainer">
                     <label for="number">Capacity:</label>
-                    <input id="capacity" type="number"/>
+                    <input class="flexInput" id="capacity" type="number"/>
                 </div>
-                <div>
+                <div class="inputContainer">
                     <label for="search">Search:</label>
-                    <button id="search">Search</button>
+                    <button class="flexInput" id="searchBtn">Search</button>
                 </div>
             </div>
             <!-- Container Div -->
@@ -58,121 +57,132 @@
                     </ol>
                 </div>
                 <!-- Map Div-->
-                <div id="mapDiv">
+                <div class="border" id="mapDiv">
                     <!-- Map Image: https://images.luxuryescapes.com/b0a96f08ch5aix5qo6n.webp -->
                     <img id="bookingSystemMap" src="./assets/booking-system-map.png" alt="Booking System Map Image"/>
-                    <!-- Popup1 Image: https://unsplash.com/photos/a-group-of-palm-trees-in-a-park-pkNE0FLtOi0 By Vizag Explore -->
-                    <div class="reservedArea" id="ra-1">
+                    <!-- Reserved Area 1 -->
+                    <div class="reservedArea border" id="ra-1">
                         <p class="raText">1</p>
-                        <span class="popup" id="popup1">
+                        <span class="popup border" id="popup1">
                             <h1>Reserved Area 1</h1>
                             <p>Cost:</p>
                             <p>Booking Status:</p>
                             <p>Capacity:</p>
-                            <img class="popupImage" src="" alt="Popup1 Image"/>
+                            <!-- Popup1 Image: https://unsplash.com/photos/a-group-of-palm-trees-in-a-park-pkNE0FLtOi0 By Vizag Explore -->
+                            <img class="popupImage border" src="" alt="Popup1 Image"/>
                         </span>
                     </div>
-                    <!-- Popup2 Image: https://unsplash.com/photos/a-couple-of-people-sitting-on-a-bench-under-a-tree-Exoow0-lFCM By Benjamin Cheng -->
-                    <div class="reservedArea" id="ra-2">
+                    <!-- Reserved Area 2 -->
+                    <div class="reservedArea border" id="ra-2">
                         <p class="raText">2</p>
-                        <span class="popup" id="popup2">
+                        <span class="popup border" id="popup2">
                             <h1>Reserved Area 2</h1>
                             <p>Cost:</p>
                             <p>Booking Status:</p>
                             <p>Capacity:</p>
-                            <img class="popupImage" src="" alt="Popup2 Image"/>
+                            <!-- Popup2 Image: https://unsplash.com/photos/a-couple-of-people-sitting-on-a-bench-under-a-tree-Exoow0-lFCM By Benjamin Cheng -->
+                            <img class="popupImage border" src="" alt="Popup2 Image"/>
                         </span>
                     </div>
-                    <!-- Popup3 Image: https://unsplash.com/photos/a-view-of-a-lush-green-yard-with-a-bridge-in-the-background-t-DzvK7xE9Q By Vizag Explore -->
-                    <div class="reservedArea" id="ra-3">
+                    <!-- Reserved Area 3 -->
+                    <div class="reservedArea border" id="ra-3">
                         <p class="raText">3</p>
-                        <span class="popup" id="popup3">
+                        <span class="popup border" id="popup3">
                             <h1>Reserved Area 3</h1>
                             <p>Cost:</p>
                             <p>Booking Status:</p>
                             <p>Capacity:</p>
-                            <img class="popupImage" src="" alt="Popup3 Image"/>
+                            <!-- Popup3 Image: https://unsplash.com/photos/a-view-of-a-lush-green-yard-with-a-bridge-in-the-background-t-DzvK7xE9Q By Vizag Explore -->
+                            <img class="popupImage border" src="" alt="Popup3 Image"/>
                         </span>
                     </div>
-                    <!-- Popup4 Image: https://unsplash.com/photos/cooked-food-prepare-on-the-picnic-area-5YqoS5s54gY By Maria Ilves -->
-                    <div class="reservedArea" id="ra-4">
+                    <!-- Reserved Area 4 -->
+                    <div class="reservedArea border" id="ra-4">
                         <p class="raText">4</p>
-                        <span class="popup" id="popup4">
+                        <span class="popup border" id="popup4">
                             <h1>Reserved Area 4</h1>
                             <p>Cost:</p>
                             <p>Booking Status:</p>
                             <p>Capacity:</p>
-                            <img class="popupImage" src="" alt="Popup4 Image"/>
+                            <!-- Popup4 Image: https://unsplash.com/photos/cooked-food-prepare-on-the-picnic-area-5YqoS5s54gY By Maria Ilves -->
+                            <img class="popupImage border" src="" alt="Popup4 Image"/>
                         </span>
                     </div>
-                    <!-- Popup5 Image: https://unsplash.com/photos/green-trees-near-river-during-daytime-nyGMVykQrPw By Johan Mouchet -->
-                    <div class="reservedArea" id="ra-5">
+                    <!-- Reserved Area 5 -->
+                    <div class="reservedArea border" id="ra-5">
                         <p class="raText">5</p>
-                        <span class="popup" id="popup5">
+                        <span class="popup border" id="popup5">
                             <h1>Reserved Area 5</h1>
                             <p>Cost:</p>
                             <p>Booking Status:</p>
                             <p>Capacity:</p>
-                            <img class="popupImage" src="" alt="Popup5 Image"/>
+                            <!-- Popup5 Image: https://unsplash.com/photos/green-trees-near-river-during-daytime-nyGMVykQrPw By Johan Mouchet -->
+                            <img class="popupImage border" src="" alt="Popup5 Image"/>
                         </span>
                     </div>
-                    <!-- Popup6 Image: https://unsplash.com/photos/a-pathway-in-a-park-with-trees-and-bushes-ukWUuYof0jA By Vizag Explore -->
-                    <div class="reservedArea" id="ra-6">
+                    <!-- Reserved Area 6 -->
+                    <div class="reservedArea border" id="ra-6">
                         <p class="raText">6</p>
-                        <span class="popup" id="popup6">
+                        <span class="popup border" id="popup6">
                             <h1>Reserved Area 6</h1>
                             <p>Cost:</p>
                             <p>Booking Status:</p>
                             <p>Capacity:</p>
-                            <img class="popupImage" src="" alt="Popup6 Image"/>
+                            <!-- Popup6 Image: https://unsplash.com/photos/a-pathway-in-a-park-with-trees-and-bushes-ukWUuYof0jA By Vizag Explore -->
+                            <img class="popupImage border" src="" alt="Popup6 Image"/>
                         </span>
                     </div>
-                    <!-- Popup7 Image: https://unsplash.com/photos/a-lawn-with-purple-flowers-and-a-building-in-the-background-f3fExUJEn-c By Vizag Explore -->
-                    <div class="reservedArea" id="ra-7">
+                    <!-- Reserved Area 7 -->
+                    <div class="reservedArea border" id="ra-7">
                         <p class="raText">7</p>
-                        <span class="popup" id="popup7">
+                        <span class="popup border" id="popup7">
                             <h1>Reserved Area 7</h1>
                             <p>Cost:</p>
                             <p>Booking Status:</p>
                             <p>Capacity:</p>
-                            <img class="popupImage" src="" alt="Popup7 Image"/>
+                            <!-- Popup7 Image: https://unsplash.com/photos/a-lawn-with-purple-flowers-and-a-building-in-the-background-f3fExUJEn-c By Vizag Explore -->
+                            <img class="popupImage border" src="" alt="Popup7 Image"/>
                         </span>
                     </div>
-                    <!-- Popup8 Image: https://unsplash.com/photos/a-couple-of-benches-sitting-in-the-middle-of-a-park-bajUuxheE9w By Vizag Explore -->
-                    <div class="reservedArea" id="ra-8">
+                    <!-- Reserved Area 8 -->
+                    <div class="reservedArea border" id="ra-8">
                         <p class="raText">8</p>
-                        <span class="popup" id="popup8">
+                        <span class="popup border" id="popup8">
                             <h1>Reserved Area 8</h1>
                             <p>Cost:</p>
                             <p>Booking Status:</p>
                             <p>Capacity:</p>
-                            <img class="popupImage" src="" alt="Popup8 Image"/>
+                            <!-- Popup8 Image: https://unsplash.com/photos/a-couple-of-benches-sitting-in-the-middle-of-a-park-bajUuxheE9w By Vizag Explore -->
+                            <img class="popupImage border" src="" alt="Popup8 Image"/>
                         </span>
                     </div>
-                    <!-- Popup9 Image: https://unsplash.com/photos/a-brick-path-in-the-middle-of-a-lush-green-park-gXerXQcHs4k By Vizag Explore -->
-                    <div class="reservedArea" id="ra-9">
+                    <!-- Reserved Area 9 -->
+                    <div class="reservedArea border" id="ra-9">
                         <p class="raText">9</p>
-                        <span class="popup" id="popup9">
+                        <span class="popup border" id="popup9">
                             <h1>Reserved Area 9</h1>
                             <p>Cost:</p>
                             <p>Booking Status:</p>
                             <p>Capacity:</p>
-                            <img class="popupImage" src="" alt="Popup9 Image"/>
+                            <!-- Popup9 Image: https://unsplash.com/photos/a-brick-path-in-the-middle-of-a-lush-green-park-gXerXQcHs4k By Vizag Explore -->
+                            <img class="popupImage border" src="" alt="Popup9 Image"/>
                         </span>
                     </div>
-                    <!-- Popup10 Image: https://unsplash.com/photos/a-green-yard-with-trees-and-a-building-in-the-background-e09qAo_mziM By Vizag Explore -->
-                    <div class="reservedArea" id="ra-10">
+                    <!-- Reserved Area 10 -->
+                    <div class="reservedArea border" id="ra-10">
                         <p class="raText">10</p>
-                        <span class="popup" id="popup10">
+                        <span class="popup border" id="popup10">
                             <h1>Reserved Area 10</h1>
                             <p>Cost:</p>
                             <p>Booking Status:</p>
                             <p>Capacity:</p>
-                            <img class="popupImage" src="" alt="Popup10 Image"/>
+                            <!-- Popup10 Image: https://unsplash.com/photos/a-green-yard-with-trees-and-a-building-in-the-background-e09qAo_mziM By Vizag Explore -->
+                            <img class="popupImage border" src="" alt="Popup10 Image"/>
                         </span>
                     </div>
                 </div>
             </div>
+            <!-- Summary Modal Div -->
             <div id="summaryModal" class="modal">
                 <div class="modalContent">
                     <h1>Booking Summary</h1>
@@ -187,6 +197,7 @@
                     <button class="modalBtn" id="cancelBtn" onclick="closeModal()">Cancel</button>
                 </div>
             </div>
+            <!-- Booked Modal Div -->
             <div id="bookedModal" class="modal">
                 <div class="modalContent">
                     <h1>Booking Submitted</h1>
