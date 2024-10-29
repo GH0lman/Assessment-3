@@ -27,15 +27,15 @@
             <div id="inputDiv">
                 <div>
                     Check In: 
-                    <input type="date" />
+                    <input id="check-in" type="date" />
                 </div>
                 <div>
                     Check Out: 
-                    <input type="date" />
+                    <input id="check-out" type="date" />
                 </div>
                 <div>
                     Capacity: 
-                    <input type="number" />
+                    <input id="capacity" type="number" />
                 </div>
                 <div>
                     Search: 
@@ -61,7 +61,7 @@
                 <div id="mapDiv">
                     <!-- Map Image: https://images.luxuryescapes.com/b0a96f08ch5aix5qo6n.webp -->
                     <img id="bookingSystemMap" src="./assets/booking-system-map.png" alt="Booking System Map Image"/>
-                    <!-- Popup1 Image: https://unsplash.com/photos/green-grass-field-with-palm-trees-AneX1iTbA24 By Oxana Melis -->
+                    <!-- Popup1 Image: https://unsplash.com/photos/a-group-of-palm-trees-in-a-park-pkNE0FLtOi0 By Vizag Explore -->
                     <div class="reservedArea" id="ra-1">
                         <p class="raText">1</p>
                         <span class="popup" id="popup1">
@@ -116,7 +116,7 @@
                             <img class="popupImage" src="" alt="Popup5 Image"/>
                         </span>
                     </div>
-                    <!-- Popup6 Image: https://unsplash.com/photos/girl-standing-near-palm-trees-YoZcZbQjerg By Geraldine Lewa -->
+                    <!-- Popup6 Image: https://unsplash.com/photos/a-pathway-in-a-park-with-trees-and-bushes-ukWUuYof0jA By Vizag Explore -->
                     <div class="reservedArea" id="ra-6">
                         <p class="raText">6</p>
                         <span class="popup" id="popup6">
@@ -138,7 +138,7 @@
                             <img class="popupImage" src="" alt="Popup7 Image"/>
                         </span>
                     </div>
-                    <!-- Popup8 Image: https://unsplash.com/photos/a-walkway-leading-to-a-lush-green-park-bQSR11eykiM By Vizag Explore -->
+                    <!-- Popup8 Image: https://unsplash.com/photos/a-couple-of-benches-sitting-in-the-middle-of-a-park-bajUuxheE9w By Vizag Explore -->
                     <div class="reservedArea" id="ra-8">
                         <p class="raText">8</p>
                         <span class="popup" id="popup8">
@@ -149,7 +149,7 @@
                             <img class="popupImage" src="" alt="Popup8 Image"/>
                         </span>
                     </div>
-                    <!-- Popup9 Image: https://unsplash.com/photos/a-lush-green-park-filled-with-lots-of-trees-h1XzeCBc7Dk By Vizag Explore -->
+                    <!-- Popup9 Image: https://unsplash.com/photos/a-brick-path-in-the-middle-of-a-lush-green-park-gXerXQcHs4k By Vizag Explore -->
                     <div class="reservedArea" id="ra-9">
                         <p class="raText">9</p>
                         <span class="popup" id="popup9">
@@ -160,7 +160,7 @@
                             <img class="popupImage" src="" alt="Popup9 Image"/>
                         </span>
                     </div>
-                    <!-- Popup10 Image: https://unsplash.com/photos/a-grassy-area-with-trees-and-a-clock-in-the-center-KNNePDp0dO4 By Vizag Explore -->
+                    <!-- Popup10 Image: https://unsplash.com/photos/a-green-yard-with-trees-and-a-building-in-the-background-e09qAo_mziM By Vizag Explore -->
                     <div class="reservedArea" id="ra-10">
                         <p class="raText">10</p>
                         <span class="popup" id="popup10">
@@ -173,6 +173,21 @@
                     </div>
                 </div>
             </div>
+            <div id="summaryModal" class="modal">
+                <div class="modalContent">
+                    <h1>Booking Summary</h1>
+                    <p>Check In:</p>
+                    <p>Check Out:</p>
+                    <p>Number of People:</p>
+                    <p>Maximum Capacity:</p>
+                    <p>No. of Days:</p>
+                    <p>Cost per Day:</p>
+                    <p>Total Cost:</p>
+                    <button class="modalBtn" id="confirmBtn">Confirm Booking</button>
+                    <button class="modalBtn" id="cancelBtn" onclick="closeModal()">Cancel</button>
+                </div>
+            </div>
+
         </section>
         <!-- Java Script Link -->
         <script src="./app.js"></script>

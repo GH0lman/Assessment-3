@@ -7,70 +7,70 @@
     xsi:noNamespaceSchemaLocation="areas.xsd">
     <!-- Reserved Area 1 -->
     <area>
-        <cost>99.99</cost>
+        <cost>100.00</cost>
         <status>Available</status>
         <capacity>20</capacity>
         <src>../assets/popup1.jpg</src>
     </area>
     <!-- Reserved Area 2 -->
     <area>
-        <cost>99.99</cost>
+        <cost>100.00</cost>
         <status>Reserved</status>
         <capacity>20</capacity>
         <src>../assets/popup2.jpg</src>
     </area>
     <!-- Reserved Area 3 -->
     <area>
-        <cost>79.99</cost>
+        <cost>80.00</cost>
         <status>Available</status>
         <capacity>10</capacity>
         <src>../assets/popup3.jpg</src>
     </area>
     <!-- Reserved Area 4 -->
     <area>
-        <cost>49.99</cost>
+        <cost>50.00</cost>
         <status>Available</status>
         <capacity>5</capacity>
         <src>../assets/popup4.jpg</src>
     </area>
     <!-- Reserved Area 5 -->
     <area>
-        <cost>49.99</cost>
+        <cost>50.00</cost>
         <status>Reserved</status>
         <capacity>5</capacity>
         <src>../assets/popup5.jpg</src>
     </area>
     <!-- Reserved Area 6 -->
     <area>
-        <cost>49.99</cost>
+        <cost>50.00</cost>
         <status>Reserved</status>
         <capacity>5</capacity>
         <src>../assets/popup6.jpg</src>
     </area>
     <!-- Reserved Area 7 -->
     <area>
-        <cost>49.99</cost>
+        <cost>50.00</cost>
         <status>Available</status>
         <capacity>5</capacity>
         <src>../assets/popup7.jpg</src>
     </area>
     <!-- Reserved Area 8 -->
     <area>
-        <cost>49.99</cost>
+        <cost>50.00</cost>
         <status>Available</status>
         <capacity>5</capacity>
         <src>../assets/popup8.jpg</src>
     </area>
     <!-- Reserved Area 9 -->
     <area>
-        <cost>79.99</cost>
+        <cost>80.00</cost>
         <status>Available</status>
         <capacity>10</capacity>
         <src>../assets/popup9.jpg</src>
     </area>
     <!-- Reserved Area 10 -->
     <area>
-        <cost>249.99</cost>
+        <cost>250.00</cost>
         <status>Available</status>
         <capacity>50</capacity>
         <src>../assets/popup10.jpg</src>
